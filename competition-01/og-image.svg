@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#faf8f4"/>
+
+  <!-- Thin top hairline -->
+  <rect x="0" y="0" width="1200" height="4" fill="#8b6f47"/>
+
+  <!-- Kicker -->
+  <text x="80" y="120"
+        font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+        font-size="20" letter-spacing="4" fill="#8b6f47">
+    A VOICE GUIDE · CLIEF NOTES COMP #01
+  </text>
+
+  <!-- Title -->
+  <text x="80" y="270"
+        font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+        font-size="104" font-weight="400" fill="#1c1c1c">
+    Ruff Cuts
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="380"
+        font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+        font-size="72" font-style="italic" font-weight="400" fill="#1c1c1c">
+    Voice as Presence
+  </text>
+
+  <!-- Divider -->
+  <rect x="80" y="440" width="120" height="1" fill="#6b6560"/>
+
+  <!-- Tagline -->
+  <text x="80" y="495"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="28" font-weight="400" fill="#1c1c1c">
+    Four layers, one system: Core · Principles · Patterns · The System.
+  </text>
+
+  <!-- Small footer -->
+  <text x="80" y="555"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="22" font-weight="400" fill="#6b6560">
+    Human-readable. AI-reproducible. Transparent by design.
+  </text>
+</svg>

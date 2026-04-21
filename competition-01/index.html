@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruff Cuts — Voice as Presence</title>
+  <meta name="description" content="A voice guide for anyone who writes for Ruff Cuts — human, or AI following these instructions. Transparent by design." />
+  <meta name="theme-color" content="#faf8f4" />
+  <meta name="author" content="Marcos Accioly" />
+
+  <link rel="canonical" href="https://marcosaccioly.github.io/cliefnotes-competition/competition-01/" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Clief Notes — Weekly Competition #01" />
+  <meta property="og:title" content="Ruff Cuts — Voice as Presence" />
+  <meta property="og:description" content="A voice guide built as a transparent method, not a template. Four layers — Core, Principles, Patterns, The System. Human-readable. AI-reproducible." />
+  <meta property="og:url" content="https://marcosaccioly.github.io/cliefnotes-competition/competition-01/" />
+  <meta property="og:image" content="https://marcosaccioly.github.io/cliefnotes-competition/competition-01/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ruff Cuts — Voice as Presence. A voice guide for Clief Notes competition #01." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ruff Cuts — Voice as Presence" />
+  <meta name="twitter:description" content="A voice guide built as a transparent method, not a template. Human-readable. AI-reproducible." />
+  <meta name="twitter:image" content="https://marcosaccioly.github.io/cliefnotes-competition/competition-01/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --paper:    #faf8f4;
+      --ink:      #1c1c1c;
+      --muted:    #6b6560;
+      --hairline: #e8e3dc;
+      --accent:   #8b6f47;
+      --accent-bg:#f4ede2;
+
+      --serif: 'Fraunces', Georgia, 'Iowan Old Style', serif;
+      --sans:  'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { font-size: 17px; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    header {
+      margin-bottom: 64px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 2.75rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+
+    header .kicker {
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      margin: 72px 0 24px;
+    }
+
+    h3 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.375rem;
+      line-height: 1.3;
+      margin: 48px 0 16px;
+    }
+
+    h4 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 32px 0 12px;
+    }
+
+    p { margin: 0 0 20px; }
+
+    strong { font-weight: 600; color: var(--ink); }
+    em { font-style: italic; }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    ul, ol { padding-left: 1.25rem; margin: 0 0 24px; }
+    li { margin-bottom: 8px; }
+    ol > li::marker { color: var(--muted); }
+
+    blockquote {
+      margin: 0 0 20px;
+      padding: 14px 22px;
+      background: #fff;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.96875rem;
+    }
+    blockquote p:last-child { margin-bottom: 0; }
+    blockquote strong.subject {
+      display: block;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid var(--hairline);
+      margin: 72px 0;
+    }
+
+    .pattern {
+      margin: 56px 0;
+    }
+
+    .pattern .variant-label {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 24px 0 8px;
+    }
+    .pattern .variant-label.onbrand { color: var(--accent); }
+
+    .whatchanged {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      border-top: 1px dashed var(--hairline);
+      padding-top: 16px;
+      margin-top: 24px;
+    }
+    .whatchanged strong { color: var(--ink); }
+
+    pre {
+      font-family: var(--mono);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      background: #fff;
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      padding: 20px 22px;
+      overflow-x: auto;
+      margin: 0 0 24px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.9em;
+      background: var(--accent-bg);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: 1em;
+    }
+
+    .layer-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      counter-reset: layer;
+    }
+    .layer-list li {
+      counter-increment: layer;
+      padding: 12px 0 12px 40px;
+      border-top: 1px solid var(--hairline);
+      position: relative;
+    }
+    .layer-list li:last-child { border-bottom: 1px solid var(--hairline); }
+    .layer-list li::before {
+      content: counter(layer, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 14px;
+      font-family: var(--mono);
+      font-size: 0.8125rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+    .layer-list strong { display: inline; }
+
+    /* ——— Mode toggle ——————————————————————————————— */
+
+    .mode-toggle {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      border-radius: 999px;
+      padding: 3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      z-index: 100;
+    }
+    .mode-toggle button {
+      background: transparent;
+      border: 0;
+      padding: 5px 14px;
+      font-family: var(--sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .mode-toggle button:hover { color: var(--ink); }
+    .mode-toggle button.active {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    /* ——— Study annotations ———————————————————————— */
+
+    .annotation {
+      display: none;
+      background: var(--accent-bg);
+      border: 1px solid #e8ddc8;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 0.9375rem;
+      color: #4a3f30;
+    }
+
+    .annotation .anno-label {
+      display: block;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .annotation p:last-child { margin-bottom: 0; }
+    .annotation strong { color: #2b2214; }
+    .annotation + .annotation { margin-top: 12px; }
+
+    .annotation .anno-block + .anno-block {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(139, 111, 71, 0.25);
+    }
+
+    .annotation ul { margin: 8px 0 12px; padding-left: 1.1rem; }
+    .annotation li { margin-bottom: 4px; }
+    .annotation code {
+      background: rgba(139, 111, 71, 0.12);
+      color: #4a3f30;
+    }
+
+    .closing-meta {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+    .closing-meta p { margin: 0; font-style: italic; }
+
+    body.study-mode .annotation {
+      display: block;
+      animation: anno-in 0.28s ease forwards;
+    }
+
+    /* Content gating by mode */
+    .view-only  { display: block; }
+    .study-only { display: none; }
+    body.study-mode .view-only  { display: none; }
+    body.study-mode .study-only { display: block; }
+
+    @keyframes anno-in {
+      from { opacity: 0; transform: translateY(-4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Subtle body class effect in study mode: dim the main body text slightly
+       so the annotations draw the eye. */
+    body.study-mode main > section > :not(.annotation):not(h2):not(h3):not(h4) {
+      /* intentionally left alone — dimming is too heavy a hand */
+    }
+
+    /* ——— Footer ———————————————————————————————————— */
+
+    footer {
+      margin-top: 96px;
+      padding-top: 32px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    footer p { margin: 0 0 8px; }
+
+    /* ——— Responsive ———————————————————————————————— */
+
+    @media (max-width: 640px) {
+      html { font-size: 16px; }
+      .container { padding: 24px 20px 80px; }
+      h1 { font-size: 2.25rem; }
+      h2 { font-size: 1.625rem; margin-top: 56px; }
+      h3 { font-size: 1.25rem; }
+      .mode-toggle {
+        position: static;
+        width: fit-content;
+        margin: 20px 20px 8px auto;
+      }
+      header { margin-bottom: 48px; }
+    }
+
+    /* ——— Print ————————————————————————————————————— */
+
+    @media print {
+      .mode-toggle { display: none; }
+      body { background: white; }
+      .annotation { display: block !important; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="view-mode">
+
+  <nav class="mode-toggle" role="tablist" aria-label="Reading mode">
+    <button data-mode="view" class="active" aria-pressed="true">View</button>
+    <button data-mode="study" aria-pressed="false">Study</button>
+  </nav>
+
+  <div class="container">
+
+    <header>
+      <h1>Ruff Cuts — Voice as Presence</h1>
+      <p class="kicker">A voice guide for anyone who writes for Ruff Cuts.</p>
+    </header>
+
+    <main>
+
+      <!-- ——— Before you start ——————————————————————— -->
+      <section id="intro">
+        <h2>Before you start</h2>
+
+        <h4>Who this is for</h4>
+        <p>A new social hire, a teammate handling customer email, an AI following these instructions. Anyone who writes for Ruff Cuts.</p>
+
+        <h4>What it's trying to do</h4>
+        <p>Not describe how we sound. Make everything we write feel like Ruff Cuts showed up — calm, specific, on time, fond of dogs, a little direct, never cutesy.</p>
+
+        <h4>How to use it</h4>
+        <p>Four layers, in order. Each grounds the next.</p>
+        <ol class="layer-list">
+          <li><strong>Core</strong> — who we are when we write.</li>
+          <li><strong>Principles</strong> — five rules you can apply immediately.</li>
+          <li><strong>Patterns</strong> — before / after examples for the situations you'll actually face.</li>
+          <li><strong>The System</strong> — the AI layer: prompt, examples, and a rubric to check yourself.</li>
+        </ol>
+
+        <aside class="annotation" data-topic="intro">
+          <div class="anno-block">
+            <span class="anno-label">Why this framing</span>
+            <p>Voice guides fail when they stay descriptive. A reader can memorize "warm and professional" and still produce a templated reply that feels warm-and-professional to no one. The framing here forces the writer to <em>perform</em> the voice, not catalog it.</p>
+          </div>
+        </aside>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ——— 1. Core ——————————————————————————————— -->
+      <section id="core">
+        <h2>1. Core — The Trusted Expert At Hand</h2>
+
+        <p>Ruff Cuts is the groomer who shows up.</p>
+
+        <p>That's not a metaphor. We literally drive a van to your driveway. Our customers don't pack the dog in the car, don't rearrange their afternoon, don't wait in a lobby. We arrive, we work, we text when we're done. The service is <em>expertise that comes to you, ready and close</em>.</p>
+
+        <p>The voice has to feel the same. Every message is a small version of the van pulling up: competent, on time, friendly in a grown-up way, clearly glad to be working with this particular dog. Not performing warmth. Not performing expertise. Just being present.</p>
+
+        <p>Dana founded Ruff Cuts after fifteen years as a vet tech. She left the clinic because dogs shake in clinics — and because she saw a better way. That history matters: we are calm in a way that is <em>earned</em>, not styled. The voice should carry that.</p>
+
+        <p><strong>When in doubt, ask:</strong> if Dana herself were standing in the driveway about to send this message, would it sound like her? If no, rewrite.</p>
+
+        <aside class="annotation" data-topic="core-archetype">
+          <div class="anno-block">
+            <span class="anno-label">Why "At Hand" and not "Friend"</span>
+            <p>The working candidate was <em>The Trusted Expert Friend</em>. We moved to <em>At Hand</em> because "friend" suggests buddy-familiarity that clashes with the brief's "talk to smart adults." "At Hand" echoes the van literally — expertise that shows up, ready, close — and holds the calm-confidence we want.</p>
+          </div>
+        </aside>
+
+        <aside class="annotation" data-topic="core-dana">
+          <div class="anno-block">
+            <span class="anno-label">Why Dana's bio belongs in a voice guide</span>
+            <p>Traditional voice guides leave the human out. That's how you get generic. The calm, the fifteen-year clinical eye, the frustration with infant-talk — these are hers, and anyone writing for the brand is inheriting them. The bio is the vector that carries authority into the writing.</p>
+          </div>
+        </aside>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ——— 2. Principles —————————————————————————— -->
+      <section id="principles">
+        <h2>2. Principles</h2>
+
+        <p>Five operating rules. Each one is tight enough to hold in your head while writing.</p>
+
+        <h3>1. Respect the reader's time.</h3>
+        <p>Our customers work from home and pay us so they don't have to think about grooming. Write short. Front-load the useful information. If you can cut a sentence and lose nothing, cut it. Attention is the first courtesy we owe.</p>
+
+        <h3>2. Prefer the specific.</h3>
+        <p>Say "Max" when you know his name. Say "your Goldendoodle" when you don't. Default to a general category ("your dog") only when specificity isn't available. Specificity is the proof that we were actually there.</p>
+
+        <h3>3. Confidence without flourish.</h3>
+        <p>We know what we're doing. That doesn't need to be said. It's shown by being precise, by answering the question that was asked, by not over-explaining. No emoji. No exclamation points. No superlatives. Flourish reads like compensation for uncertainty.</p>
+
+        <h3>4. Show up completely.</h3>
+        <p>Every message is a small version of the service. If a customer can tell the reply was templated, we lost the brand that week. Reference the specific dog, the specific day, the specific thing that happened. If you don't have specifics, get them before writing.</p>
+
+        <h3>5. Trust the reader's intelligence.</h3>
+        <p>Our customers chose a premium service deliberately. They don't need convincing that grooming is important, that we care about dogs, or that their time is valuable. Write as if they already know. Say the useful thing and stop.</p>
+
+        <aside class="annotation" data-topic="principles-why-five">
+          <div class="anno-block">
+            <span class="anno-label">Why five, not ten or twenty</span>
+            <p>Five is the limit of "rules I can hold in my head while writing." Twenty adjectives become soup. Ten principles become a checklist no one remembers. Each of these five is tied to a specific failure mode — and the rubric in Section 4.3 maps to them 1:1.</p>
+          </div>
+          <div class="anno-block">
+            <span class="anno-label">The order is deliberate</span>
+            <p>Time goes first because brevity earns attention — every other rule runs on borrowed attention. Specificity goes second because it's the hardest to fake at scale and the easiest tell that the writer was actually there. Flourish is third because it's the most mechanical failure to catch. Presence and Respect close the list as the posture checks.</p>
+          </div>
+          <div class="anno-block">
+            <span class="anno-label">The map</span>
+            <p>P1 (Time) → Rubric Q1. P2 (Specificity) → Q2. P3 (Flourish) → Q3. P4 (Presence) → Q4. P5 (Respect) → Q5. No ambiguity about which rule just failed, which means no ambiguity about what to rewrite.</p>
+          </div>
+        </aside>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ——— 3. Patterns ——————————————————————————— -->
+      <section id="patterns">
+        <h2>3. Patterns</h2>
+
+        <p>For each situation: an off-brand version (the industry default), an on-brand version (how we actually write), and a short note on what changed.</p>
+
+        <!-- Pattern 3.1 — Social caption -->
+        <article class="pattern" id="pattern-caption">
+          <h3>3.1 Social caption</h3>
+          <p><strong>Context.</strong> A photo of a dog after a groom, posted to Instagram.</p>
+
+          <div class="variant-label">Off-brand</div>
+          <blockquote>
+            <p>Meet Max! 🥰 Our pup came in for the full spa treatment today and looks absolutely pawsitively adorable! 🐾✨ Doesn't he clean up nicely? #FurBaby #MobileGrooming #RuffCuts</p>
+          </blockquote>
+
+          <div class="variant-label onbrand">On-brand</div>
+          <blockquote>
+            <p>Max, after. Goldendoodle, rainy day, not a fan of the nail trim but a very patient boy about it. Back to his people.</p>
+          </blockquote>
+
+          <p class="whatchanged"><strong>What changed.</strong> Named dog. Named breed. Named condition (rainy day). Named a real reaction (the nail trim). Zero forced cuteness. A reader can tell we were actually there.</p>
+
+          <aside class="annotation" data-topic="pattern-caption">
+            <div class="anno-block">
+              <span class="anno-label">Why this choice</span>
+              <p>Specificity is the hardest principle to fake. "Rainy day, not a fan of the nail trim" is the signature of someone who was actually there — no social manager writing from a spreadsheet produces that line.</p>
+            </div>
+            <div class="anno-block">
+              <span class="anno-label">With / without the system</span>
+              <p><strong>Without:</strong> <em>Max had a great groom today and he's looking sharp!</em></p>
+              <p><strong>With:</strong> <em>Max, after. Goldendoodle, rainy day, not a fan of the nail trim but a very patient boy about it. Back to his people.</em></p>
+              <p>Same prompt input. Two very different outputs. The system is what made the difference.</p>
+            </div>
+          </aside>
+        </article>
+
+        <!-- Pattern 3.2 — Apology email -->
+        <article class="pattern" id="pattern-apology">
+          <h3>3.2 Apology email</h3>
+          <p><strong>Context.</strong> Running 35 minutes late because a prior groom took longer than expected.</p>
+
+          <div class="variant-label">Off-brand</div>
+          <blockquote>
+            <p><strong class="subject">Subject: So sorry!!</strong>
+            Hi there! So sorry we're running a little late today — we know how much your time matters! 🙏 Thank you for being SO understanding. We'll be there as soon as we can. xo</p>
+          </blockquote>
+
+          <div class="variant-label onbrand">On-brand</div>
+          <blockquote>
+            <p><strong class="subject">Subject: Running late today</strong>
+            Hi [Name] — we're about 35 minutes behind. The 11 AM took longer than I planned and I didn't want to rush it. I'll text when we're 10 minutes out. If 35 minutes doesn't work on your end, we'll reschedule — no charge, no stress.</p>
+            <p>— Dana</p>
+          </blockquote>
+
+          <p class="whatchanged"><strong>What changed.</strong> Concrete number. Concrete reason. Concrete next action. An escape hatch offered before it's asked for. No performative sorry. Signed by a human.</p>
+
+          <aside class="annotation" data-topic="pattern-apology">
+            <div class="anno-block">
+              <span class="anno-label">Why this choice</span>
+              <p>Performative apologies (exclamation + xo + emoji) waste time — they ask the reader to absolve the writer. The on-brand version is the opposite posture: specific number, specific reason, named next action, clean escape hatch. A competent person talking to another competent person.</p>
+            </div>
+            <div class="anno-block">
+              <span class="anno-label">How the prompt enforces it</span>
+              <p>P1 pushes front-loaded facts. P3 kills <code>!</code> and <code>xo</code>. P5 is what adds the "no charge, no stress" — anticipating the reader's next question before they ask.</p>
+            </div>
+          </aside>
+        </article>
+
+        <!-- Pattern 3.3 — Complaint handling -->
+        <article class="pattern" id="pattern-complaint">
+          <h3>3.3 Complaint handling</h3>
+          <p><strong>Context.</strong> A customer writes saying their dog seemed unsettled after the groom.</p>
+
+          <div class="variant-label">Off-brand</div>
+          <blockquote>
+            <p>Oh no!! 💔 I'm SO sorry to hear that! We'd NEVER want Max to have a bad experience! Can you tell us more? We want to make this right! Our pups deserve the BEST!</p>
+          </blockquote>
+
+          <div class="variant-label onbrand">On-brand</div>
+          <blockquote>
+            <p>Thanks for telling me, [Name] — I want to know. A few questions so I'm working from the right picture: was the stress during the groom, after we left, or both? Anything specific you noticed — posture, not eating, hiding? I don't want to guess before I hear you. I'll take care of the next groom on us either way.</p>
+            <p>— Dana</p>
+          </blockquote>
+
+          <p class="whatchanged"><strong>What changed.</strong> Takes it seriously without panicking. Asks before assuming. Names the gesture of ownership (next groom on us) upfront, so the exchange isn't transactional. No exclamation stacking, no hearts, no capital letters performing regret. Signed by a human.</p>
+
+          <aside class="annotation" data-topic="pattern-complaint">
+            <div class="anno-block">
+              <span class="anno-label">Why this choice</span>
+              <p>Panicking performs empathy. Precise questions perform actual care. The move here is to take the complaint seriously without making the reply about our feelings — and to offer the gesture of ownership ("next groom on us") before the negotiation starts.</p>
+            </div>
+            <div class="anno-block">
+              <span class="anno-label">How the prompt enforces it</span>
+              <p>P4 is what turns <em>"Can you tell us more?"</em> into the specific questions (posture, not eating, hiding). P3 strips the hearts, the ALL CAPS, the exclamation stacking.</p>
+            </div>
+          </aside>
+        </article>
+
+        <!-- Pattern 3.4 — Competitor mention -->
+        <article class="pattern" id="pattern-competitor">
+          <h3>3.4 Competitor mention</h3>
+          <p><strong>Context.</strong> A potential customer asks why Ruff Cuts instead of PetSmart.</p>
+
+          <div class="variant-label">Off-brand</div>
+          <blockquote>
+            <p>Great question! PetSmart is a decent option if you're looking for something basic, but we offer a TOTALLY different experience. No kennels! No waiting! No stress! Just your baby getting the 5-star treatment in your own driveway 🚐✨</p>
+          </blockquote>
+
+          <div class="variant-label onbrand">On-brand</div>
+          <blockquote>
+            <p>PetSmart works for a lot of people — it's cheaper, easier to book last minute. What we do is different, not automatically better: we come to you, there's no kennel time, and your dog doesn't leave the driveway. For a dog who's anxious in new spaces, that difference is real. For a dog who doesn't mind, you might not need us.</p>
+          </blockquote>
+
+          <p class="whatchanged"><strong>What changed.</strong> Acknowledges the competitor without diminishing them. Names the tradeoff honestly. Tells a dog owner it's okay not to choose us. That honesty buys trust we can't buy any other way.</p>
+
+          <aside class="annotation" data-topic="pattern-competitor">
+            <div class="anno-block">
+              <span class="anno-label">Why this choice</span>
+              <p>"For a dog who doesn't mind, you might not need us" is the whole brand in one sentence. It signals confidence (we're not afraid of losing the call) <em>and</em> respect (we assume you can judge your own dog). That's the move that delivers on the brief line <em>"we don't trash them, but we're clearly different."</em></p>
+            </div>
+          </aside>
+        </article>
+
+        <!-- Pattern 3.5 — Booking confirmation -->
+        <article class="pattern" id="pattern-booking">
+          <h3>3.5 Booking confirmation / text-when-done</h3>
+          <p><strong>Context.</strong> Confirming a Tuesday appointment and setting expectations for the day.</p>
+
+          <div class="variant-label">Off-brand</div>
+          <blockquote>
+            <p>Hi! Just confirming we'll be there Tuesday between 9-11 AM to pamper Max! 🐾 Please make sure he's ready for his spa day! We'll text when we're all done! Can't wait!! ✨</p>
+          </blockquote>
+
+          <div class="variant-label onbrand">On-brand</div>
+          <blockquote>
+            <p>Tuesday, 9-11 AM window. I'll text when I'm 15 minutes out. Max can stay inside until we pull up — no need to have him ready early. I'll text again when we're done so you can come grab him.</p>
+            <p>— Dana</p>
+          </blockquote>
+
+          <p class="whatchanged"><strong>What changed.</strong> Every sentence does operational work. Nothing performs care; the care <em>is</em> the clarity. This is the voice at its most load-bearing — it's the message customers see most often, and it's where we quietly prove the brand every time.</p>
+
+          <aside class="annotation" data-topic="pattern-booking">
+            <div class="anno-block">
+              <span class="anno-label">Why this matters more than the others</span>
+              <p>This is the message customers see most often. It's where the voice proves itself every day. If this one doesn't feel like Ruff Cuts, nothing else matters.</p>
+            </div>
+            <div class="anno-block">
+              <span class="anno-label">The hidden move</span>
+              <p>"No need to have him ready early" solves a UX problem — the owner trying to anticipate the van's arrival — before it surfaces. That one sentence is P4 in its most operational form.</p>
+            </div>
+          </aside>
+        </article>
+
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ——— 4. The System ————————————————————————— -->
+      <section id="system">
+        <h2>4. The System</h2>
+
+        <p>The three layers above are for a human reading and writing. This layer makes the voice reproducible by AI too.</p>
+
+        <p>Three parts, designed to be pasted directly into any LLM (Claude, ChatGPT, Gemini) as a system prompt + few-shot + rubric. Under 1000 tokens total. No tools, no chains, no agents.</p>
+
+        <h3>4.1 The system prompt</h3>
+        <p>Copy everything in this block as the system / custom instruction of your LLM.</p>
+
+        <pre><code>You write for Ruff Cuts, a mobile dog-grooming service in Austin run by Dana and two other groomers. Your job is to write — captions, emails, replies — the way Ruff Cuts writes them.
+
+WHO RUFF CUTS IS
+Ruff Cuts is The Trusted Expert At Hand: groomer-level expertise that drives a van to the customer's driveway, grooms the dog without stress, and leaves. Dana, the founder, was a vet tech for 15 years. Our calm is earned, not styled. Every message is a small version of the van pulling up: competent, on time, friendly in a grown-up way.
+
+HOW YOU WRITE — FIVE OPERATING RULES
+
+1. Respect the reader's time.
+Front-load the useful information. Cut anything that adds no operational value. Short is the default.
+
+2. Prefer the specific.
+Name the dog by name when you have it. By breed when you don't. Generic ("your dog") only when no specificity is available.
+
+3. Confidence without flourish.
+No emoji. No exclamation points. No superlatives. No hype words (absolutely, totally, obsessed).
+
+4. Show up completely.
+If the task gives you specifics (dog name, weather, situation), use them. If it doesn't, ask — never default to templated language.
+
+5. Trust the reader's intelligence.
+Our customers already know grooming matters and that their time is valuable. Don't convince them. Say the useful thing and stop.
+
+PHRASES WE DON'T REACH FOR
+These default to the industry cute-talk register we're working against. Avoid unless there's a specific, strong editorial reason to use one.
+fur baby, pup, pawsome, pawsitively, pawfect, spa day, full treatment, rocking his/her new look, doesn't he look cute, our pups, baby, besties, xo, can't wait, so excited, amazing, incredible, 5-star, premium, luxury.
+
+(Note: "literally" is fine when it means literally — e.g. "we literally drive a van to your driveway." Banned elsewhere as a filler intensifier.)
+
+WHO WE'RE TALKING TO
+Adults, 35-55, dual-income, often working from home. They chose our service because it saves them from rearranging their day. They want useful information delivered respectfully, not enthusiasm performed at them.
+
+SIGN-OFF
+Business replies from Dana: sign "— Dana". From other groomers: first name. Captions and public posts: unsigned.
+
+BEFORE YOU OUTPUT — RUN THE RUBRIC
+Ask these five questions of your draft. If any answer is no, rewrite before sending.
+
+  1. Time — Would cutting any sentence lose useful information?
+  2. Specificity — Is the dog named as specifically as the task allows?
+  3. Flourish — Zero emoji, zero exclamation points, zero superlatives?
+  4. Presence — Does this reference THIS situation, not a generic one?
+  5. Respect — Would an intelligent adult find this respectful of their time?
+
+If the task is ambiguous — missing dog name, missing context — ask the user for specifics before writing. Templated language is the failure mode we are most concerned about.</code></pre>
+
+        <aside class="annotation" data-topic="system-prompt">
+          <div class="anno-block">
+            <span class="anno-label">How the prompt is organized</span>
+            <p>Each section targets a specific behavior:</p>
+            <ul>
+              <li><strong>WHO RUFF CUTS IS</strong> — sets the archetype (the Core).</li>
+              <li><strong>FIVE OPERATING RULES</strong> — the Principles verbatim.</li>
+              <li><strong>PHRASES WE DON'T REACH FOR</strong> — enforces P3 mechanically.</li>
+              <li><strong>WHO WE'RE TALKING TO</strong> — calibrates register.</li>
+              <li><strong>SIGN-OFF</strong> — keeps consistency across writers.</li>
+              <li><strong>RUN THE RUBRIC</strong> — gates the output with self-check.</li>
+              <li><strong>Ask first if ambiguous</strong> — blocks the templating failure mode.</li>
+            </ul>
+            <p>Order is intentional: identity → rules → lexicon → audience → output-gating. Remove any section and the chain breaks.</p>
+          </div>
+        </aside>
+
+        <h3>4.2 Few-shot library</h3>
+
+        <div class="view-only">
+          <p>The five Patterns above, reformatted as input / output pairs the model can learn from. Each Pattern becomes an example where the off-brand version shows the move to avoid and the on-brand version is what to produce — the contrast helps the model see the <em>how</em>, not just the destination.</p>
+          <p><em>Switch to <strong>Study</strong> to see the library formatted for paste-into-LLM.</em></p>
+        </div>
+
+        <div class="study-only">
+          <p>Paste below the system prompt, or feed as assistant-turn examples. XML tags are Claude-idiomatic; ChatGPT and Gemini handle them fine.</p>
+          <pre><code>&lt;examples&gt;
+  &lt;example&gt;
+    &lt;task&gt;Write an Instagram caption for a photo of Max, a Goldendoodle, after his groom on a rainy day. He wasn't a fan of the nail trim but was patient.&lt;/task&gt;
+    &lt;avoid&gt;Meet Max! 🥰 Our pup came in for the full spa treatment today and looks absolutely pawsitively adorable! 🐾✨ #FurBaby&lt;/avoid&gt;
+    &lt;output&gt;Max, after. Goldendoodle, rainy day, not a fan of the nail trim but a very patient boy about it. Back to his people.&lt;/output&gt;
+  &lt;/example&gt;
+
+  &lt;example&gt;
+    &lt;task&gt;The 9 AM groom took longer than planned. Write an email to the 11 AM customer letting them know we're 35 minutes behind.&lt;/task&gt;
+    &lt;avoid&gt;Subject: So sorry!! — Hi there! So sorry we're running a little late today! 🙏 Thank you for being SO understanding. We'll be there as soon as we can. xo&lt;/avoid&gt;
+    &lt;output&gt;Subject: Running late today — Hi [Name], we're about 35 minutes behind. The 11 AM took longer than I planned and I didn't want to rush it. I'll text when we're 10 minutes out. If 35 minutes doesn't work on your end, we'll reschedule — no charge, no stress. — Dana&lt;/output&gt;
+  &lt;/example&gt;
+
+  &lt;example&gt;
+    &lt;task&gt;A customer writes saying their dog, Max, seemed unsettled after the groom. Reply.&lt;/task&gt;
+    &lt;avoid&gt;Oh no!! 💔 I'm SO sorry to hear that! We'd NEVER want Max to have a bad experience! Can you tell us more? We want to make this right!&lt;/avoid&gt;
+    &lt;output&gt;Thanks for telling me, [Name] — I want to know. A few questions so I'm working from the right picture: was the stress during the groom, after we left, or both? Anything specific you noticed — posture, not eating, hiding? I don't want to guess before I hear you. I'll take care of the next groom on us either way. — Dana&lt;/output&gt;
+  &lt;/example&gt;
+
+  &lt;example&gt;
+    &lt;task&gt;A potential customer asks why Ruff Cuts instead of PetSmart. Reply.&lt;/task&gt;
+    &lt;avoid&gt;Great question! PetSmart is a decent option if you're looking for something basic, but we offer a TOTALLY different experience. No kennels! No waiting! Just your baby getting the 5-star treatment in your own driveway!&lt;/avoid&gt;
+    &lt;output&gt;PetSmart works for a lot of people — it's cheaper, easier to book last minute. What we do is different, not automatically better: we come to you, there's no kennel time, and your dog doesn't leave the driveway. For a dog who's anxious in new spaces, that difference is real. For a dog who doesn't mind, you might not need us.&lt;/output&gt;
+  &lt;/example&gt;
+
+  &lt;example&gt;
+    &lt;task&gt;Confirm a Tuesday 9-11 AM appointment with the customer. Dog's name is Max.&lt;/task&gt;
+    &lt;avoid&gt;Hi! Just confirming we'll be there Tuesday between 9-11 AM to pamper Max! 🐾 Please make sure he's ready for his spa day! We'll text when we're all done! Can't wait!! ✨&lt;/avoid&gt;
+    &lt;output&gt;Tuesday, 9-11 AM window. I'll text when I'm 15 minutes out. Max can stay inside until we pull up — no need to have him ready early. I'll text again when we're done so you can come grab him. — Dana&lt;/output&gt;
+  &lt;/example&gt;
+&lt;/examples&gt;</code></pre>
+          <p><em>The <code>&lt;avoid&gt;</code> tag is custom to this guide. It pairs with <code>&lt;output&gt;</code> so the model sees the anti-pattern and the target side by side. Most modern models pick up the distinction with no extra instruction.</em></p>
+        </div>
+
+        <aside class="annotation" data-topic="few-shot">
+          <div class="anno-block">
+            <span class="anno-label">Why the <code>&lt;avoid&gt;</code> tag</span>
+            <p>Most few-shot examples show only "good" outputs. Ours show the bad version next to the good one. Naming the anti-pattern makes the target sharper — models learn the <em>shift</em> better than the destination.</p>
+          </div>
+          <div class="anno-block">
+            <span class="anno-label">Why XML tags</span>
+            <p>Claude was trained on XML and handles the structure natively. ChatGPT and Gemini parse them fine too. Structure is the cheapest way to raise output consistency — flat-text few-shot is a common failure mode.</p>
+          </div>
+        </aside>
+
+        <h3>4.3 Self-check rubric</h3>
+        <p>For any draft — human-written or AI-generated — ask these five questions before sending.</p>
+
+        <ol>
+          <li><strong>Time.</strong> Would cutting any sentence lose useful information? If no, cut it.</li>
+          <li><strong>Specificity.</strong> Is the dog named as specifically as the task allows?</li>
+          <li><strong>Flourish.</strong> Zero emoji? Zero exclamation points? Zero superlatives?</li>
+          <li><strong>Presence.</strong> Does this message reference <em>this</em> situation, not a generic one?</li>
+          <li><strong>Respect.</strong> Would an intelligent adult find this respectful of their time?</li>
+        </ol>
+        <p>One "no" = one rewrite. Any draft that clears all five is safe to ship.</p>
+
+        <aside class="annotation" data-topic="rubric">
+          <div class="anno-block">
+            <span class="anno-label">Why the rubric is inside the system prompt</span>
+            <p>Most prompts end with "produce output." Ours ends with "produce output, <em>then check it against these five questions</em>." That's self-critique as the last step — the model catches its own drift before emission.</p>
+          </div>
+          <div class="anno-block">
+            <span class="anno-label">Why exactly five</span>
+            <p>One per Principle. The mapping is 1:1 on purpose. A "no" on Question 3 means P3 was violated. No ambiguity about which rule failed, which means no ambiguity about what to rewrite.</p>
+          </div>
+        </aside>
+
+        <h3>4.4 How to use this system</h3>
+        <ol>
+          <li>Paste <strong>Section 4.1</strong> into the system / custom-instruction field of your LLM.</li>
+          <li>Send the task in plain English. Be specific: <em>"Write a caption for Max, a Goldendoodle, post-groom, rainy day, didn't love the nail trim but was patient."</em></li>
+          <li>Apply <strong>Section 4.3</strong> to the output. If anything fails, ask the model to rewrite and name the failing principle.</li>
+        </ol>
+        <p>That's the whole system. No tools. No chains. No agents.</p>
+      </section>
+
+      <div class="study-only closing-meta">
+        <p>Written in the voice it prescribes. If it fails that test at any point, fix this guide before fixing the writer.</p>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>Ruff Cuts — Voice as Presence. A submission for Clief Notes Weekly Competition #1.</p>
+      <p>Toggle <strong>Study</strong> to see the thinking behind each section — why each choice, how the prompt enforces it, what AI outputs look like with and without each rule, and the paste-ready few-shot library.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('.mode-toggle [data-mode]');
+      const body = document.body;
+
+      function setMode(mode) {
+        body.classList.remove('view-mode', 'study-mode');
+        body.classList.add(mode + '-mode');
+        buttons.forEach(b => {
+          const active = b.dataset.mode === mode;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        try { localStorage.setItem('ruffcuts-mode', mode); } catch (e) {}
+      }
+
+      buttons.forEach(b => {
+        b.addEventListener('click', () => setMode(b.dataset.mode));
+      });
+
+      // Restore last mode on load.
+      try {
+        const saved = localStorage.getItem('ruffcuts-mode');
+        if (saved === 'study' || saved === 'view') setMode(saved);
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
