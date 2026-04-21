@@ -1,0 +1,27 @@
+# Internal workspace — do not publish
+CLAUDE.md
+MEMORY.md
+CONTEXT.md
+REFERENCES.md
+memory/
+_playbook/
+.claude/
+
+# Client brief (source material, not for publication)
+*.pdf
+
+# Windows ruído
+*.stackdump
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Build/cache
+*.log
