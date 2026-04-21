@@ -1,8 +1,8 @@
 # Clief Notes — Competition Submissions
 
-Marcos Accioly's entries for the [Clief Notes](https://cliefnotes.com/) community weekly competitions.
+Marcos Accioly's entries for the [Clief Notes](https://www.skool.com/quantum-quill-lyceum-1116) community weekly competitions.
 
-Each competition has its own folder with a self-contained submission (single-file HTML + source notes), deployed via GitHub Pages.
+Each competition has its own folder with a self-contained submission (usually a single-file HTML + source notes), deployed via GitHub Pages.
 
 ## Submissions
 
@@ -23,10 +23,8 @@ Each `competition-NN/` folder contains:
 
 ## Local preview
 
-```bash
-cd competition-01
-python -m http.server 8000
-# open http://localhost:8000
+```
+Just run the HTML in your browser
 ```
 
 ## License
